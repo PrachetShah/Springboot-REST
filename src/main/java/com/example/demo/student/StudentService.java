@@ -22,6 +22,13 @@ public class StudentService {
 				"prachetshah@gmail.com",
 				21,
 				LocalDate.of(2002, 12, 26)
+			),
+			new Student(
+				2L, 
+				"Kevin",
+				"kevinshah@gmail.com",
+				14,
+				LocalDate.of(2010, 9, 30)
 			)
 		);
 	}
