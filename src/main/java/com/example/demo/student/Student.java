@@ -2,6 +2,8 @@ package com.example.demo.student;
 
 import java.time.LocalDate;
 
+// This is the Student Class where we create student object for our application to use, create constructors,
+// getters and setters which are used by controller and service layer to serve outputs
 public class Student {
     private Long id;
     private String name;
