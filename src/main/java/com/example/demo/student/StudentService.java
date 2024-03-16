@@ -6,7 +6,12 @@ import java.util.List;
 // import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-// This acts as a Service layer for our API Layer and Service helps us acheive that which is similar to component
+/*
+This acts as a Service layer for our API Layer and Service helps us acheive that which is similar to component
+In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called "beans"
+@Service declares that the given class is a bean of our application
+*/ 
+
 @Service
 public class StudentService {
 	public List<Student> getStudent(){
