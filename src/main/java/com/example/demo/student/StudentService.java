@@ -3,6 +3,7 @@ package com.example.demo.student;
 import java.time.LocalDate;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -14,23 +15,18 @@ In Spring, the objects that form the backbone of your application and that are m
 
 @Service
 public class StudentService {
+	private final StudentRepository studentRepository;
+
+	// creating constructor with dependency injection
+	@Autowired
+	public StudentService(StudentRepository studentRepository){
+		this.studentRepository = studentRepository;
+	}
+
+
 	public List<Student> getStudent(){
-		return List.of(
-			new Student(
-				1L, 
-				"Prachet",
-				"prachetshah@gmail.com",
-				21,
-				LocalDate.of(2002, 12, 26)
-			),
-			new Student(
-				2L, 
-				"Kevin",
-				"kevinshah@gmail.com",
-				14,
-				LocalDate.of(2010, 9, 30)
-			)
-		);
+		// you can call all the DB commands like find_all, find_one, save, etc in this
+		return studentRepository.findAll();
 	}
 
 }
