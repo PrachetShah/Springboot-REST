@@ -2,6 +2,7 @@ package com.example.demo.student;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.stereotype.Component;
@@ -27,6 +28,15 @@ public class StudentService {
 	public List<Student> getStudent(){
 		// you can call all the DB commands like find_all, find_one, save, etc in this
 		return studentRepository.findAll();
+	}
+
+	public void addNewStudent(Student student){
+		Optional<Student> studentOptional = studentRepository.findStudentByEmail(student.getEmail());
+		// checking if returned true by the sql command
+		if(studentOptional.isPresent()){
+			throw new IllegalStateException("Email Taken");
+		}
+		studentRepository.save(student);
 	}
 
 }
