@@ -4,13 +4,9 @@
 
 #### 1. To run the code(Using Maven):
 
-1. Install the dependencies needed to run the application and also downloading SNAPSHOT of production application
+1. Install the dependencies needed to run the application and also downloading SNAPSHOT of production application - `mvn install`
 
-   `mvn install`
-
-2. After Installing using java command run the generated SNAPSHOT.jar file
-
-   `java -jar .\target\demo-0.0.1-SNAPSHOT.jar`
+2. After Installing using java command run the generated SNAPSHOT.jar file - `java -jar .\target\demo-0.0.1-SNAPSHOT.jar`
 
 #### 2. To run the local springboot application:
 
