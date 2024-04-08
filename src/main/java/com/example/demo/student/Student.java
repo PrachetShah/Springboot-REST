@@ -34,6 +34,8 @@ public class Student {
     private LocalDate dob;
 
     // No need to be a column in database, it should be calculated from DOB
+    // we use the @Transient annotation to indicate the Java Persistence API (JPA) should ignore the 
+    // field when mapping objects to a database.
     @Transient
     private Integer age;
 
@@ -94,6 +96,7 @@ public class Student {
         this.dob = dob;
     }
 
+    // The @Override annotation denotes that the child class method overrides the base class method. 
     @Override
     public String toString() {
         // TODO Auto-generated method stub
