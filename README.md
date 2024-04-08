@@ -15,3 +15,14 @@
 #### Architecture of Application
 
 ![architecture](Layers.png)
+
+### Steps for Springboot:
+
+1. After extracting from Spring Initializr, comment JPA until repository is not implemented
+2. Use `@RestController` and `@RequestMapping` for defining path in Controller File.
+3. Use `@Service` to set Service file as Service Func.
+4. Use `@Autowired` in both Controller and Service for Dependency Injection
+5. For Table in DB, use `@Table` and `@Entity` and use necessary generators for different variables.
+6. Use `@Repository` in repository file
+7. in Config file, use `@Configuration` on class and `@Bean` for method to add initial values in DB when running command
+8. If we use `spring.jpa.hibernate.ddl-auto=create-drop`, then there is need for Config, else use, `...=update`, to dont delete the DB Details when application reloads
