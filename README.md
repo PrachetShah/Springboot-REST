@@ -26,3 +26,8 @@
 6. Use `@Repository` in repository file
 7. in Config file, use `@Configuration` on class and `@Bean` for method to add initial values in DB when running command
 8. If we use `spring.jpa.hibernate.ddl-auto=create-drop`, then there is need for Config, else use, `...=update`, to dont delete the DB Details when application reloads
+
+### To Upload Package on GitHub:
+
+1. Change the REPOSITORY on `/{user}/.m2/settings.xml` and add `OWNER` and `GITHUB_TOKEN`
+2. Add `Distrbution Management` in `pom.xml`
