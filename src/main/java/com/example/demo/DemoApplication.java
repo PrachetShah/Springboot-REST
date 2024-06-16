@@ -15,6 +15,6 @@ public class DemoApplication {
 
 	@GetMapping
 	public String hello(){
-		return "<h3>Hello, welcome to Student API, go to '/api/v1/student's for interacting with API</h3>";
+		return "<h3>Hello, welcome to Student API, go to '/api/v1/student's to access the API</h3>";
 	}
 }

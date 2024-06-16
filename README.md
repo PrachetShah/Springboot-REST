@@ -6,7 +6,7 @@
 
 1. Install the `.jar` file from `packages` on gitub
 
-2. After Installing usejava command run the generated SNAPSHOT.jar file - `java -jar NAME_OF_FILE.jar`
+2. After Installing use java command run the generated SNAPSHOT.jar file - `java -jar NAME_OF_FILE.jar`
 
 #### 2. To run the code(Using Maven):
 
